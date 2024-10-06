@@ -1,0 +1,84 @@
+<html>
+
+</html>
+
+<head>
+    <title>Esercizio Magazzino</title>
+</head>
+
+<body>
+    <header></header>
+    <main>
+
+        <!-- diamo un identificativo all'h1 -->
+        <h1 id="titolo-bello">Codice Esempio Seconda lezione Capitolo 3</h1>
+    </main>
+    <footer>
+
+    </footer>
+
+
+    <script>
+
+        const carrello = {
+            lista_spesa : [
+
+            ],
+
+
+        }
+        primo_input();
+
+
+        function primo_input(carrello) {
+            let input2 = "";
+            while (true) {
+                while (input2 != "1" && input2 != "2" && input2 != "3") {
+                    input2 = parseInt(prompt("vuoi aggiungere, modificare, o visualizzare il prodotto (1,2,3 per selezionare)"));
+                }
+                switch (input2) {
+                    case 1:
+                        aggiungiprod(lista_spesa, quantità);
+
+                        break;
+                    case 2:
+                        rimuoviprod(lista_spesa, quantità);
+                        break;
+                    case 3:
+                        visualizzaspesa(lista_spesa, quantità);
+                        break;
+
+
+                }
+
+
+            }
+        }
+
+
+
+        function visualizzaspesa() {
+            for (let i = 0; i < this.lista_spesa.lenght; i++) {
+                console.log(this.lista_spesa[i])
+            }
+
+        }
+
+
+        function aggiungiprod(dizionario, prodotto, quantita) {
+
+            let nuovo_prodotto = prompt("aggiungi il nuovo prodotto")
+            push.nuovo_prodotto = lista_spesa;
+        }
+
+
+        function rimuoviprod() {
+            delete lista_spesa[nome];
+            delete lista_spesa[quantità];
+        }
+
+    </script>
+
+</body>
+
+</html>

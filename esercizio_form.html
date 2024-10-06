@@ -1,0 +1,150 @@
+<html>
+<header>
+    <script>
+        function addScritta() {
+
+            let benvenuto = document.createElement("h1");
+            benvenuto.innerText = "Benvenuto Utente";
+
+            document.getElementById('div1').appendChild(benvenuto);
+
+        }
+
+
+        function mostra_credenziali(nome1, cognome1, email1, password1) {
+
+            let benvenuto = document.createElement("h1");
+            benvenuto.innerText = "Benvenuto Utente";
+            document.getElementById('scritta1').appendChild(benvenuto);
+            
+            let nome = document.createElement("li")
+            nome.innerText = nome1;
+            document.getElementById('lista').appendChild(nome)
+
+            let cognome = document.createElement("li")
+            cognome.innerText = cognome1;
+            document.getElementById('lista').appendChild(cognome)
+
+            let email = document.createElement("li")
+            email.innerText = email1;
+            document.getElementById('lista').appendChild(email)
+
+            let password = document.createElement("li")
+            password.innerText = password1;
+            document.getElementById('lista').appendChild(password)
+        }
+
+    </script>
+</header>
+<main>
+    <h1>form LOGIN</h1>
+    <form id="form-1">
+
+        <table>
+
+            <tr>
+                <td>
+                    <h3>Nome</h3>
+                </td>
+                <td>
+                    <input type="text" id="nome" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <h3>Cognome</h3>
+                </td>
+                <td>
+                    <input type="text" id="cognome" />
+                </td>
+            </tr>
+
+
+
+            <tr>
+                <td>
+                    <h3>Email</h3>
+                </td>
+                <td>
+                    <input type="email" id="email" />
+                </td>
+            </tr>
+
+
+
+            <tr>
+                <td>
+                    <h3>Password</h3>
+                </td>
+                <td>
+                    <input type="password" id="password" />
+                </td>
+            </tr>
+        </table>
+
+
+
+        <button type="submit">Accedi</button>
+        <button type="reset">Reset</button>
+
+
+    </form>
+</main>
+
+<div id="div1">
+    <h1 id="scritta1"></h1>
+    <ul id="lista"></ul>
+
+
+
+</div>
+
+
+<footer></footer>
+<script>
+    let nome = document.getElementById("nome").value
+    let cognome = document.getElementById("cognome").value
+    let email = document.getElementById("email").value
+    let password = document.getElementById("password").value
+
+    let form1 = document.getElementById("form-1")
+    form1.addEventListener("submit", function () {
+
+        event.preventDefault();
+        if (document.getElementById("nome").value == "" || document.getElementById("cognome").value == ""
+            || document.getElementById("email").value == "" || document.getElementById("password").value == "") {
+            if (document.getElementById("nome").value == "") {
+                alert('il campo nome è vuoto')
+            }
+            else if (document.getElementById("cognome").value == "") {
+                alert('il campo cognome è vuoto')
+            }
+            else if (document.getElementById("email").value == "") {
+                alert('il campo email è vuoto')
+            }
+            else if (document.getElementById("password").value == "") {
+                alert('il campo password è vuoto')
+            }
+        }
+        else {
+            let nome = document.getElementById("nome").value
+            let cognome = document.getElementById("cognome").value
+            let email = document.getElementById("email").value
+            let password = document.getElementById("password").value
+
+            
+            mostra_credenziali(nome, cognome, email, password)
+            console.log(nome + cognome + email + password)
+
+        }
+
+    })
+
+
+
+</script>
+
+</body>
+
+</html>
